@@ -54,14 +54,14 @@ body{
     color: #A500F3;
 }
 .codingW{
-    background: -webkit-linear-gradient(45deg,#F38300, #31C6CF);
+    background: linear-gradient(45deg,#F38300, #31C6CF);
     background-clip: text;
     -webkit-background-clip: text;
-    color: transparent;
     -webkit-text-fill-color: transparent;
+    
 }
 .codingB{
-    background: -webkit-linear-gradient(45deg,#A500F3, #31C6CF);
+    background: linear-gradient(45deg,#A500F3, #31C6CF);
     background-clip: text;
     -webkit-background-clip: text;
     color: transparent;

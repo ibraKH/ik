@@ -1,0 +1,297 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: #181818;
+}
+#parent{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-size: 200%;
+    transition: 1s ease-out;  
+}
+.menuPN{
+    right: 5%;
+    transition: 2s;
+}
+.menuP{
+    left: 5%;
+    transform: rotateY(180deg);
+    transition: 2s;
+}
+.changeTheme{
+    background-color: #181818;
+    background-position: left;
+    background: linear-gradient(to left, white 50%, #181818 50%) right;
+}
+.changeThemeB{
+    background-color: white;
+    background-position: right;
+    background: linear-gradient(to right, #181818 50%, white 50%) left;
+}
+.hide{
+    opacity: 0;
+    transition: 1s ease-in-out;
+}
+
+.show{
+    opacity: 1;
+    transition: 1s ease-in-out;
+}
+.whiteTheme{
+    color: black;
+    background: linear-gradient(180deg, #A500F3 11.92%, #31C6CF 93.4%);
+    transition: background-color 1s linear;
+}
+.blackTheme{
+    color: white;
+    background: linear-gradient(180deg, #F38300 11.92%, #31C6CF 93.4%);
+}
+.majorW{
+    color: #F38300;
+}
+.majorB{
+    color: #A500F3;
+}
+.codingW{
+    background: -webkit-linear-gradient(45deg,#F38300, #31C6CF);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.codingB{
+    background: -webkit-linear-gradient(45deg,#A500F3, #31C6CF);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+@media only screen and (min-width: 700px){
+    #main{
+        position: absolute;
+        width: 430px;
+        height: 430px;
+        border-radius: 100%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    .blackColor{
+        color: black;
+    }
+    .whiteColor{
+        color: white;
+    }
+    #gi{
+        color: white;
+    }
+    #ti{
+        color: white;
+    }
+    #ii{
+        color: white;
+    }
+    #links {
+        color: white;
+        position: fixed;
+        right: 5%;
+        bottom: 10%;
+        display: grid;
+        grid-template-columns: repeat(3, 100px);
+        grid-template-rows: 50px;
+        grid-column-gap: 37px;
+        grid-row-gap: 0px;
+    }
+    #icons{
+        position: fixed;
+        width: 2%;
+        height: 15%;
+        top: 42.5%;
+        left: 0.5%;
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: repeat(3, 30%);
+        grid-column-gap: 0px;
+        grid-row-gap: 0px;
+    }
+    #github { 
+        grid-area: 1 / 1 / 2 / 2; 
+    }
+    #twitter { 
+        grid-area: 2 / 1 / 3 / 2; 
+    }
+    #instagram {
+         grid-area: 3 / 1 / 4 / 2; 
+    }
+    #menu{
+        position: fixed;
+        width: 2.5%;
+        height: 2%;
+        top: 10%;
+        right: 5%;
+    }
+    #menu:hover{
+        cursor: pointer;
+    }
+    #menuA{
+        position: absolute;
+        right: 0;
+        width: 30px;
+        height: 2px;
+        background-color: white;
+    }
+    #menuB{
+        position: absolute;
+        top: 6px;
+        right: 0;
+        width: 20px;
+        height: 2px;
+        background-color: white;
+    }
+    #major { 
+        cursor: pointer;
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 24px;
+        line-height: 28px;
+        text-align: center;
+        grid-area: 1 / 1 / 2 / 2;
+    }
+    
+    #coding { 
+        cursor: pointer;
+        
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 24px;
+        line-height: 28px;
+        text-align: center;
+        grid-area: 1 / 2 / 2 / 3; 
+    }
+    
+    #projects {
+        cursor: pointer;
+        color: #31C6CF;
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 24px;
+        line-height: 28px;
+        text-align: center;
+        grid-area: 1 / 3 / 2 / 4; 
+    }
+}
+@media only screen and (max-width: 500px){
+    #main{
+        position: absolute;
+        width: 250px;
+        height: 250px;
+        border-radius: 100%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -70%);
+    }
+    .blackColor{
+        color: white;
+    }
+    .whiteColor{
+        color: black;
+    }
+    #links {
+        color: white;
+        position: fixed;
+        width: 90%;
+        left: 5%;
+        bottom: 25%;
+        display: grid;
+        text-align: center;
+        grid-template-columns: repeat(3, 33%);
+        grid-template-rows: 50px;
+        grid-column-gap: 0%;
+        grid-row-gap: 0px;
+    }
+    #icons{
+        transition: 1s ease-in-out;
+        background-color: white;
+        position: fixed;
+        width: 100%;
+        height: 10%;
+        bottom: 0;
+        display: grid;
+        padding: 5px;
+        justify-content: center;
+        border-radius: 200px 200px 0 0;
+        grid-template-columns: repeat(3, 10%);
+        grid-template-rows: 10%;
+        grid-column-gap: 0px;
+        grid-row-gap: 0px;
+    }
+    #menu{
+        position: fixed;
+        width: 2.5%;
+        height: 2%;
+        top: 10%;
+    }
+    #menu:hover{
+        cursor: pointer;
+    }
+    #menuA{
+        position: absolute;
+        right: 0;
+        width: 15px;
+        height: 2px;
+        background-color: beige;
+    }
+    #menuB{
+        position: absolute;
+        top: 6px;
+        right: 0;
+        width: 8px;
+        height: 2px;
+        background-color: beige;
+    }
+    #major { 
+        position: relative;
+        cursor: pointer;
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 20px;
+        line-height: 28px;
+        text-align: center;
+    }
+    #coding { 
+        position: relative;
+        cursor: pointer;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 20px;
+        line-height: 28px;
+        text-align: center; 
+    }
+    #projects {
+        position: relative;
+        cursor: pointer;
+        color: #31C6CF;
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 20px;
+        line-height: 28px;
+        text-align: center;
+    }
+    #github { 
+        grid-area: 1 / 1 / 2 / 2; 
+    }
+    #twitter { 
+        grid-area: 1 / 2 / 2 / 3;
+    }
+    #instagram {
+        grid-area: 1 / 3 / 2 / 4; 
+    }
+}

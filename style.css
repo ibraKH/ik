@@ -33,7 +33,10 @@ body{
     opacity: 0;
     transition: 1s ease-in-out;
 }
-
+.hideE{
+    display: none;
+    opacity: 0;
+}
 .show{
     opacity: 1;
     transition: 1s ease-in-out;
@@ -54,14 +57,13 @@ body{
     color: #A500F3;
 }
 .codingW{
-    background: linear-gradient(45deg,#F38300, #31C6CF);
+    background: greenyellow;
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    
 }
 .codingB{
-    background: linear-gradient(45deg,#A500F3, #31C6CF);
+    background: greenyellow;
     background-clip: text;
     -webkit-background-clip: text;
     color: transparent;
@@ -77,6 +79,21 @@ body{
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
+    }
+    
+    
+    #mainImg{
+        position: absolute;
+        width: 350px;
+        height: 350px;
+        border-radius: 100%;
+        top: 70%;
+        left: 56%;
+        transform: translate(-56%, -70%);
+    }
+    #mainImg img{
+        width: 100%;
+        height: 100%;
     }
     .blackColor{
         color: black;
@@ -187,14 +204,118 @@ body{
     }
 }
 @media only screen and (max-width: 500px){
+    #mainParent{
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+    }
+    #charImg{
+    position: absolute;
+    width: 144px;
+    height: 250px;
+    right: 10%;
+    top: 0%;
+    z-index: 2;
+    }
     #main{
-        position: absolute;
+        position: absolute;  
+    }
+    .mainBig{
         width: 250px;
         height: 250px;
-        border-radius: 100%;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -70%);
+        border-radius: 100%;
+    }
+    .mainTop{
+        width: 80%;
+        height: 80px;
+        top: 20.5%;
+        left: 50%;
+        transform: translate(-50%, -22%);
+        transition: 1s ease;
+    }
+    #achA{
+        position: fixed;
+        width: 90%;
+        height: 26px;
+        left: 5%;
+        top: 60%;
+        border-radius: 20px;
+        justify-content: space-between;
+        z-index: 2;
+    }
+    #achBG{
+        position: fixed;
+        width: 90%;
+        height: 26px;
+        background: linear-gradient(90deg, #833AB4 0%, rgba(253, 29, 29, 0.522845) 47.72%, #FCB045 100%);
+        left: 5%;
+        top: 61%;
+        border-radius: 20px;
+        display: inline-block;
+        z-index: 1;
+    }
+    #achA>div{
+    margin-left: 10.2%;
+    width: 40px;
+    height: 40px;
+    vertical-align: top;
+    display: inline-block;
+    *display: inline;
+    }
+    #achB{
+        position: fixed;
+        width: 60%;
+        height: 26px;
+        left: 20%;
+        top: 70%;
+        border-radius: 20px;
+        text-align: center;
+        z-index: 2;
+    }
+    #achBGB{
+        position: fixed;
+        width: 60%;
+        height: 26px;
+        background: linear-gradient(90deg, #833AB4 0%, rgba(253, 29, 29, 0.522845) 47.72%, #FCB045 100%);
+        left: 20%;
+        top: 71%;
+        border-radius: 20px;
+        z-index: 1;
+    }
+    #css{
+    margin-left: 20px;
+    width: 40px;
+    height: 40px;
+    display: inline-block;
+    *display: inline;
+    }
+    #html{
+    margin-left: -6%;
+    width: 40px;
+    height: 40px;
+    display: inline-block;
+    *display: inline;
+    }
+    img{
+        width: 100%;
+        height: 100%;
+    }
+    #mainImg{
+        position: absolute;
+        width: 200px;
+        height: 200px;
+        border-radius: 100%;
+        top: 55%;
+        left: 63%;
+        transform: translate(-63%, -55%);
+    }
+    #mainImg img{
+        width: 100%;
+        height: 100%;
     }
     .blackColor{
         color: white;
@@ -207,13 +328,19 @@ body{
         position: fixed;
         width: 90%;
         left: 5%;
-        bottom: 25%;
         display: grid;
         text-align: center;
         grid-template-columns: repeat(3, 33%);
         grid-template-rows: 50px;
         grid-column-gap: 0%;
         grid-row-gap: 0px;
+        z-index: 2;
+    }
+    .linksNoraml{
+        bottom: 25%;
+    }
+    .linksDown{
+        bottom: 10%;
     }
     #icons{
         transition: 1s ease-in-out;
@@ -236,9 +363,7 @@ body{
         width: 2.5%;
         height: 2%;
         top: 10%;
-    }
-    #menu:hover{
-        cursor: pointer;
+        z-index: 2;
     }
     #menuA{
         position: absolute;

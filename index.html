@@ -25,21 +25,53 @@
 </head>
 <body>
     <div id="parent">
+        <img src="character.png" id="charImg" class="hideE">
+        <div class="hideE" id="achA">
+            <div id="js">
+                <img src="js.png">
+            </div>
+            <div id="node">
+                <img src="node.png">
+            </div>
+            <div id="react">
+                <img src="react.png">
+            </div>
+            <div id="sql">
+                <img src="sql.png">
+            </div>
+        </div>
+        <div id="achBG" class="hideE">
+        </div>
+        <div class="hideE" id="achB">
+            <div id="html">
+                <img src="html.png">
+            </div>
+            <div id="css">
+                <img src="css.png">
+            </div>
+        </div>
+        <div id="achBGB" class="hideE">
+
+        </div>
         <div id="menu" onclick="changeThemeF()" class="menuPN">
             <div id="menuA"></div>
             <div id="menuB"></div>
         </div>
-        <div id="main" class="blackTheme">
+        <div id="mainParent">
+            <div id="main" class="blackTheme mainBig">
 
+            </div>
+            <div id="mainImg">
+            </div>
         </div>
-        <div id="links">
-            <div id="major" class="majorW">Major
+        <div id="links" class="linksNoraml">
+            <div id="major" class="majorW" onclick="majorFC()">Major
                 <div id="majorBtn"></div>
             </div>
-            <div id="coding" class="codingW">Coding
+            <div id="coding" class="codingW" onclick="codingFC()">Coding
                 <div id="codingBtn" class="hide"></div>
             </div>
-            <div id="projects" class="projectsW">Project
+            <div id="projects" class="projectsW" onclick="projectsFC()">Project
                 <div id="projectsBtn" class="hide"></div>
             </div>
         </div>

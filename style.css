@@ -57,17 +57,10 @@ body{
     color: #A500F3;
 }
 .codingW{
-    background: greenyellow;
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: white;
 }
 .codingB{
-    background: greenyellow;
-    background-clip: text;
-    -webkit-background-clip: text;
-    color: transparent;
-    -webkit-text-fill-color: transparent;
+    color: black;
 }
 
 @media only screen and (min-width: 700px){
@@ -181,7 +174,6 @@ body{
     #coding { 
         cursor: pointer;
         
-        -webkit-text-fill-color: transparent;
         font-family: Roboto;
         font-style: normal;
         font-weight: normal;
@@ -393,7 +385,6 @@ body{
     #coding { 
         position: relative;
         cursor: pointer;
-        -webkit-text-fill-color: transparent;
         font-family: Roboto;
         font-style: normal;
         font-weight: normal;

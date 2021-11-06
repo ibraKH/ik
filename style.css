@@ -370,6 +370,7 @@ body{
         grid-template-rows: 10%;
         grid-column-gap: 0px;
         grid-row-gap: 0px;
+        z-index: 2;
     }
     #menu{
         position: fixed;

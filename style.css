@@ -5,7 +5,7 @@
 body{
     margin: 0;
     padding: 0;
-    background-color: #181818;
+    background-color: white;
 }
 #parent{
     position: absolute;
@@ -26,12 +26,12 @@ body{
 .changeTheme{
     background-color: #181818;
     background-position: left;
-    background: linear-gradient(to left, white 50%, #181818 50%) right;
+    background: linear-gradient(to left, #181818 50%, white 50%) right;
 }
 .changeThemeB{
-    background-color: white;
+    background-color: #181818;
     background-position: right;
-    background: linear-gradient(to right, #181818 50%, white 50%) left;
+    background: linear-gradient(to right, white 50%, #181818 50%) left;
 }
 .hide{
     opacity: 0;
@@ -46,25 +46,25 @@ body{
     transition: 1s ease-in-out;
 }
 .whiteTheme{
-    color: black;
-    background: linear-gradient(180deg, #A500F3 11.92%, #31C6CF 93.4%);
+    color: white;
+    background: linear-gradient(180deg, #F38300 11.92%, #31C6CF 93.4%);
     transition: background-color 1s linear;
 }
 .blackTheme{
-    color: white;
-    background: linear-gradient(180deg, #F38300 11.92%, #31C6CF 93.4%);
-}
-.majorW{
-    color: #F38300;
-}
-.majorB{
-    color: #A500F3;
-}
-.codingW{
-    color: white;
-}
-.codingB{
     color: black;
+    background: linear-gradient(180deg, #A500F3 11.92%, #31C6CF 93.4%);
+}
+.W{
+    color: black;
+}
+.B{
+    color: black;
+}
+.lBtnW{
+    background-color: #F38300;
+}
+.lBtnB{
+    background-color: #A500F3;
 }
 
 @media only screen and (min-width: 700px){
@@ -164,7 +164,7 @@ body{
         height: 2px;
         background-color: white;
     }
-    #major { 
+    #major {
         cursor: pointer;
         font-family: Roboto;
         font-style: normal;
@@ -201,9 +201,133 @@ body{
 @media only screen and (max-width: 500px){
     #mainParent{
         position: fixed;
-        width: 100%;
-        height: 100%;
+        width: 80%;
+        height: 80%;
+        left: 10%;
+        top: 10%;
         z-index: 1;
+    }
+    #projectsLabel{
+        position: absolute;
+        width: 100%;
+        height: 80%;
+        top: 15%;
+    }
+    #projectA{
+        border-radius: 20px;
+        position: absolute;
+        width: 208px;
+        height: 44px;
+        top: 10px;
+        left: 18px;
+        background-color: #A500F3;
+        box-shadow: 5px 5px 10px 1px #d1f5f7;
+    }
+    .PR{
+        top: 24%;
+        color: white;
+        position: absolute;
+        width: 70%;
+        height: 50%;
+        float: left;
+        left: 5%;
+    }
+    .PIR{
+        position: absolute;
+        right: 0;
+        width: 20%;
+        height: 100%;
+        float: right;
+    }
+    .PL{
+        text-align: right;
+        top: 24%;
+        color: white;
+        position: absolute;
+        width: 70%;
+        height: 50%;
+        float: right;
+        right: 10%;
+    }
+    .PIL{
+        position: absolute;
+        top: -28.5%;
+        left: -2%;
+        width: 30%;
+        height: 100%;
+        float: left;
+    }
+    #raceImg{
+        width: 70px;
+        height: 70px;
+    }
+    #projectB{
+        border-radius: 20px;
+        position: absolute;
+        width: 208px;
+        height: 44px;
+        right: 18px;
+        top: 84px;
+        background: #31C6CF;
+        box-shadow: -5px 5px 10px 1px #e6cbf3;
+    }
+    #projectC{
+        border-radius: 20px;
+        position: absolute;
+        width: 208px;
+        height: 44px;
+        top: 158px;
+        left: 18px;
+        background-color: #A500F3;
+        box-shadow: 5px 5px 10px 1px #d1f5f7;
+    }
+    #projectD{
+        border-radius: 20px;
+        position: absolute;
+        width: 208px;
+        height: 44px;
+        right: 18px;
+        top: 232px;
+        background: #C4C4C4;
+        box-shadow: -5px 5px 10px 1px rgb(240, 236, 236);
+    }
+    #faImg{
+        right: 0;
+        height: 100%;
+        width: 100%;
+        border-radius: 20px;
+    }
+    #quoteText{
+        font-family: 'Dancing Script', cursive;
+        left: 1px;
+        position: absolute;
+        top: 15px;
+        float: left;
+        width: 70%;
+    }
+    #quote{
+        color: white;
+        width: 100%;
+        height: 70px;
+        background-color: black;
+        position: absolute;
+        top: 70%;
+    }
+    #quoteImg{
+        width: 30%;
+        height: 100%;
+        float: right;
+    }
+    #projectsContainer{
+        top: 10%;
+        position: absolute;
+        width: 100%;
+        height: 60%;
+    }
+    #projectHeader{
+        position: absolute;
+        color: black;
+        left: 10%;
     }
     #codingText{
         color: black;
@@ -241,13 +365,20 @@ body{
         left: 50%;
         transform: translate(-50%, -70%);
         border-radius: 100%;
+        transition: 1s ease;
     }
     .mainTop{
-        width: 80%;
+        width: 100%;
         height: 80px;
-        top: 20.5%;
-        left: 50%;
-        transform: translate(-50%, -22%);
+        top: 11.5%;
+        transition: 1s ease;
+    }
+    .mainTopB{
+        width: 4%;
+        height: 10px;
+        top: 8%;
+        left: 40%;
+        border-radius: 50%;
         transition: 1s ease;
     }
     #achA{
@@ -331,13 +462,13 @@ body{
         height: 100%;
     }
     .blackColor{
-        color: white;
-    }
-    .whiteColor{
         color: black;
     }
-    #links {
+    .whiteColor{
         color: white;
+    }
+    #links {
+        color: black;
         position: fixed;
         width: 90%;
         left: 5%;
@@ -357,7 +488,7 @@ body{
     }
     #icons{
         transition: 1s ease-in-out;
-        background-color: white;
+        background-color: black;
         position: fixed;
         width: 100%;
         height: 6%;
@@ -384,7 +515,7 @@ body{
         right: 0;
         width: 15px;
         height: 2px;
-        background-color: beige;
+        background-color: black;
     }
     #menuB{
         position: absolute;
@@ -392,7 +523,7 @@ body{
         right: 0;
         width: 8px;
         height: 2px;
-        background-color: beige;
+        background-color: black;
     }
     #major { 
         position: relative;
@@ -403,6 +534,24 @@ body{
         font-size: 20px;
         line-height: 28px;
         text-align: center;
+    }
+    #majorBtn{
+        position: absolute;
+        width: 60px;
+        height: 2.3px;
+        left: 25%;
+    }
+    #codingBtn{
+        position: absolute;
+        width: 70px;
+        height: 2px;
+        left: 21%;
+    }
+    #projectsBtn{
+        position: absolute;
+        width: 70px;
+        height: 2px;
+        left: 21%;
     }
     #coding { 
         position: relative;
@@ -417,7 +566,6 @@ body{
     #projects {
         position: relative;
         cursor: pointer;
-        color: #31C6CF;
         font-family: Roboto;
         font-style: normal;
         font-weight: normal;

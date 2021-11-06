@@ -17,18 +17,18 @@ const achBG = document.getElementById("achBG");
 const achB = document.getElementById("achB");
 const achBGB = document.getElementById("achBGB");
 const charImg = document.getElementById("charImg");
-
+const codingText = document.getElementById("codingText");
 function majorFC(){
     if(mainImg.children.length === 0){
 
         
         let img = document.createElement("img");
-        img.src = "major.png";
+        img.src = "images\\major.png";
         mainImg.appendChild(img)
     }
     // note change the domain here in if statement
-    if(mainImg.children[0].src !== "http://127.0.0.1:5500/major.png"){
-        mainImg.children[0].src = "major.png";
+    if(mainImg.children[0].src !== "http://127.0.0.1:5500/images/major.png"){
+        mainImg.children[0].src = "images\\major.png";
     }
 }
 
@@ -36,47 +36,54 @@ function codingFC(){
     let count = 0;
     let changeTimer = setInterval(() => {
         if(count == 1){
-    
-    achA.classList.remove("hideE")
-    achBG.classList.remove("hideE")
-    achB.classList.remove("hideE")
-    achBGB.classList.remove("hideE")
+            let changeInside = setInterval(() => {
+                charImg.classList.remove("charImgA");
+                charImg.classList.add("charImgB");
+                codingText.classList.remove("hideE")
+                for(let i = 0; i < codingText.children.length; i++){
+                    codingText.children[i].classList.remove("hideE")
+                }
+                clearInterval(changeInside)
+            }, 250)
+            
+            achA.classList.remove("hideE")
+            achBG.classList.remove("hideE")
+            achB.classList.remove("hideE")
+            achBGB.classList.remove("hideE")
         }
-    
-    mainImg.classList.add("hideE");
-    links.classList.remove("linksNormal")
-    links.classList.add("linksDown")
-    main.classList.remove("mainBig");
-    main.classList.add("mainTop");
-    charImg.classList.remove("hideE");
+        mainImg.classList.add("hideE");
+        links.classList.remove("linksNormal")
+        links.classList.add("linksDown")
+        main.classList.remove("mainBig");
+        main.classList.add("mainTop");
     if(count == 1){
         clearInterval(changeTimer)
     }
     count++
-    }, 700)
+    }, 1000)
     
     if(mainImg.children.length === 0){
         let img = document.createElement("img");
-        img.src = "coding.png";
+        img.src = "images\\coding.png";
         mainImg.classList.remove("hideE");
         mainImg.appendChild(img)
     }
     // note change the domain here in if statement
-    if(mainImg.children[0].src !== "http://127.0.0.1:5500/coding.png"){
+    if(mainImg.children[0].src !== "http://127.0.0.1:5500/images/coding.png"){
         mainImg.classList.remove("hideE");
-        mainImg.children[0].src = "coding.png";
+        mainImg.children[0].src = "images\\coding.png";
     }
 }
 
 function projectsFC(){
     if(mainImg.children.length === 0){
         let img = document.createElement("img");
-        img.src = "projects.png";
+        img.src = "images\\projects.png";
         mainImg.appendChild(img)
     }
     // note change the domain here in if statement
-    if(mainImg.children[0].src !== "http://127.0.0.1:5500/projects.png"){
-        mainImg.children[0].src = "projects.png";
+    if(mainImg.children[0].src !== "http://127.0.0.1:5500/images/projects.png"){
+        mainImg.children[0].src = "images\\projects.png";
     }
 }
 

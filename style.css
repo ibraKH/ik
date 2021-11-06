@@ -1,3 +1,7 @@
+@font-face {
+    font-family: ar;
+    src: url(fonts/BoutrosJazirahTextLight.ttf);
+}
 body{
     margin: 0;
     padding: 0;
@@ -173,7 +177,6 @@ body{
     
     #coding { 
         cursor: pointer;
-        
         font-family: Roboto;
         font-style: normal;
         font-weight: normal;
@@ -202,13 +205,31 @@ body{
         height: 100%;
         z-index: 1;
     }
+    #codingText{
+        color: black;
+        text-align: right;
+        font-family: ar;
+        position: absolute;
+        top: 37%;
+        right: 1%;
+        height: 15%;
+        width: 98%;
+    }
     #charImg{
     position: absolute;
     width: 144px;
     height: 250px;
-    right: 10%;
     top: 0%;
     z-index: 2;
+    }
+    .charImgA{
+    right: 0;
+    opacity: 0;
+    }
+    .charImgB{
+        right: 10%;
+        opacity: 1;
+        transition: right 1s ease-in;
     }
     #main{
         position: absolute;  
@@ -234,7 +255,7 @@ body{
         width: 90%;
         height: 26px;
         left: 5%;
-        top: 60%;
+        top: 64%;
         border-radius: 20px;
         justify-content: space-between;
         z-index: 2;
@@ -245,7 +266,7 @@ body{
         height: 26px;
         background: linear-gradient(90deg, #833AB4 0%, rgba(253, 29, 29, 0.522845) 47.72%, #FCB045 100%);
         left: 5%;
-        top: 61%;
+        top: 65%;
         border-radius: 20px;
         display: inline-block;
         z-index: 1;
@@ -263,7 +284,7 @@ body{
         width: 60%;
         height: 26px;
         left: 20%;
-        top: 70%;
+        top: 72%;
         border-radius: 20px;
         text-align: center;
         z-index: 2;
@@ -274,7 +295,7 @@ body{
         height: 26px;
         background: linear-gradient(90deg, #833AB4 0%, rgba(253, 29, 29, 0.522845) 47.72%, #FCB045 100%);
         left: 20%;
-        top: 71%;
+        top: 73%;
         border-radius: 20px;
         z-index: 1;
     }
@@ -339,12 +360,12 @@ body{
         background-color: white;
         position: fixed;
         width: 100%;
-        height: 10%;
+        height: 6%;
         bottom: 0;
         display: grid;
         padding: 5px;
         justify-content: center;
-        border-radius: 200px 200px 0 0;
+        border-radius: 100px 100px 0 0;
         grid-template-columns: repeat(3, 10%);
         grid-template-rows: 10%;
         grid-column-gap: 0px;

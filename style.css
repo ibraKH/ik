@@ -224,6 +224,7 @@ body{
         box-shadow: 5px 5px 10px 1px #d1f5f7;
     }
     .PR{
+        font-family: 'Roboto Slab', serif;
         top: 24%;
         color: white;
         position: absolute;
@@ -240,6 +241,7 @@ body{
         float: right;
     }
     .PL{
+        font-family: ar;
         text-align: right;
         top: 24%;
         color: white;
@@ -280,6 +282,13 @@ body{
         left: 18px;
         background-color: #A500F3;
         box-shadow: 5px 5px 10px 1px #d1f5f7;
+    }
+    .ca{
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        display: block;
+        z-index: 2;
     }
     #projectD{
         border-radius: 20px;

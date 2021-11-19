@@ -19,10 +19,12 @@ const achBGB = document.getElementById("achBGB");
 const charImg = document.getElementById("charImg");
 const codingText = document.getElementById("codingText");
 const projectsLabel = document.getElementById("projectsLabel");
+const chair = document.getElementById("chair");
 
 
 let pageCount = 0;
 function pageChange(pageIndex){
+    chair.classList.add("hideE")
     if(pageCount == 0){
         if(pageIndex === 1){
             pageCount = 1;
@@ -157,6 +159,7 @@ function pageChange(pageIndex){
     }
 }
 function majorFC(){
+    chair.classList.add("hideE")
     projects.children[0].classList.add('hide')
     coding.children[0].classList.add('hide')
     major.children[0].classList.remove('hide')
@@ -189,6 +192,7 @@ function codingFC(){
                 charImg.classList.remove("charImgA");
                 charImg.classList.add("charImgB");
                 codingText.classList.remove("hideE")
+                chair.classList.remove("hideE")
                 for(let i = 0; i < codingText.children.length; i++){
                     codingText.children[i].classList.remove("hideE")
                 }
@@ -209,7 +213,7 @@ function codingFC(){
         clearInterval(changeTimer)
     }
     count++
-    }, 1000)
+    }, 600)
     
     if(mainImg.children.length === 0){
         let img = document.createElement("img");
@@ -226,6 +230,7 @@ function codingFC(){
 }
 
 function projectsFC(){
+    chair.classList.add("hideE")
     projects.children[0].classList.remove('hide')
     coding.children[0].classList.add('hide')
     major.children[0].classList.add('hide')
